@@ -2,18 +2,12 @@
 
 def search_replace(my_list, search, replace):
 
-    new_item = []
+    update_list = my_list[:]
 
-    if search in my_list:
+    for elem in range(len(update_list)):
 
-        for i in range(len(my_list)):
+        if update_list[elem] == search:
 
-            if my_list[i-1] == search:
+            update_list[elem] = replace
 
-                my_list.insert(i-1, replace)
-
-                my_list.remove(search)
-
-            new_item.append(my_list[i])
-
-    return new_item
+    return (update_list)
